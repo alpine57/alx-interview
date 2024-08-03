@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+"""Pascal's Triangle"""
+
 def pascal_triangle(n):
     """
     Generates Pascal's Triangle up to n rows.
