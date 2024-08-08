@@ -4,19 +4,19 @@
 def minOperations(n):
 """Gets fewest # of operations needed to result in exactly n H characters
 """
-    if n <= 1:
+     if n < 2:
         return 0
     
-    operations = 0
-    factor = 2
+    ops, root = 0, 2
     
-    while factor * factor <= n:
-        while n % factor == 0:
-            operations += factor
-            n //= factor
-        factor += 1
+    while root * root <= n:
+        if n % root == 0:
+            while n % root == 0:
+                ops += root
+                n //= root
+        root += 1
     
     if n > 1:
-        operations += n
+        ops += n
     
-    return operations
+    return ops
