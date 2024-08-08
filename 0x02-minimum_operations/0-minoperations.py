@@ -1,22 +1,26 @@
 #!/usr/bin/python3
-""" Module for 0-minoperations"""
+"""
+Module for 0-minoperations
+"""
 
 def minOperations(n):
-"""Gets fewest # of operations needed to result in exactly n H characters
-"""
-     if n < 2:
+    """
+    Gets the fewest number of operations needed to result in exactly n H characters.
+    """
+    if n <= 1:
         return 0
     
-    ops, root = 0, 2
+    operations = 0
+    factor = 2
     
-    while root * root <= n:
-        if n % root == 0:
-            while n % root == 0:
-                ops += root
-                n //= root
-        root += 1
+    while factor * factor <= n:
+        while n % factor == 0:
+            operations += factor
+            n //= factor
+        factor += 1
     
     if n > 1:
-        ops += n
+        operations += n
     
-    return ops
+    return operations
+
