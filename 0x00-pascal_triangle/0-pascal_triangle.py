@@ -2,13 +2,13 @@
 
 """Pascal's Triangle"""
 
+
 def pascal_triangle(n):
     """
     Generates Pascal's Triangle up to n rows.
     Args:
     n (int): The number of rows of Pascal's Triangle to generate.
-    Returns:
-    List[List[int]]: A list of lists where each list represents a row of Pascal's Triangle.
+    List[List[int]]: A list of lists where each list
     """
     if n <= 0:
         return []
@@ -23,4 +23,3 @@ def pascal_triangle(n):
         triangle.append(row)
 
     return triangle
-
